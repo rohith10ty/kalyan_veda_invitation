@@ -29,6 +29,8 @@
     .hero{
         height:100vh;
         padding:20px;
+                background-size:cover;
+        background-position:45% center;
     }
 
     .hero-content{
