@@ -1,0 +1,159 @@
+/* =====================================
+            MOBILE DEVICES
+====================================== */
+
+@media (max-width:768px){
+
+    /* Navbar */
+
+    .navbar{
+        padding:15px 20px;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hamburger{
+        display:block;
+        color:white;
+        font-size:28px;
+    }
+
+    /* Hero */
+
+    .hero{
+        height:100vh;
+        padding:20px;
+    }
+
+    .hero-content{
+        max-width:100%;
+        margin-top:40px;
+    }
+
+    .hero h4{
+        font-size:12px;
+        letter-spacing:4px;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .hero span{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:18px;
+        padding:0 10px;
+    }
+
+    .open-btn{
+        width:100%;
+        min-width:unset;
+        font-size:18px;
+        padding:16px;
+    }
+
+    /* Common Sections */
+
+    .section{
+        padding:80px 20px;
+    }
+
+    .section-title{
+        font-size:42px;
+    }
+
+    .section-description{
+        font-size:16px;
+    }
+
+    /* Scratch Card */
+
+    .scratch-card{
+        height:190px;
+    }
+
+    .scratch-date h1{
+        font-size:60px;
+    }
+
+    .scratch-date h2{
+        font-size:30px;
+    }
+
+    .scratch-date h3{
+        font-size:18px;
+        letter-spacing:4px;
+    }
+
+    /* Countdown */
+
+    .timer{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .time-box{
+        width:140px;
+        height:140px;
+    }
+
+    .time-box h3{
+        font-size:48px;
+    }
+
+    /* ===== TIMELINE ===== */
+    /* Leave empty for now.
+       We'll build the new timeline later. */
+
+    /* Gallery */
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .gallery-item{
+        aspect-ratio:1/1;
+    }
+
+    /* Venue */
+
+    .venue-wrapper{
+        flex-direction:column;
+    }
+
+    .venue-card{
+        width:100%;
+    }
+
+    .venue-map iframe{
+        height:300px;
+    }
+
+    /* RSVP */
+
+    .rsvp-card{
+        padding:35px 25px;
+    }
+
+    .rsvp-buttons{
+        flex-direction:column;
+    }
+
+    .whatsapp-btn,
+    .call-btn{
+        width:100%;
+        text-align:center;
+    }
+
+}

@@ -1,0 +1,998 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#fdf8f5;
+    color:#222;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo-icon{
+
+    font-size:26px;
+
+}
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:url("../assets/images/bg.jpg") center center/cover no-repeat;
+
+    overflow:hidden;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:90%;
+
+    max-width:650px;
+
+    text-align:center;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-top: 60px;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.18),
+
+        rgba(0,0,0,.42)
+
+    );
+
+}
+
+
+.hero h4{
+
+    font-size:15px;
+
+    letter-spacing:8px;
+
+    font-weight:400;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.9);
+
+    margin-bottom:35px;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:90px;
+
+    line-height:.95;
+
+    font-weight:600;
+
+}
+
+.hero span{
+
+    font-size:60px;
+
+    color:#d4af37;
+
+    margin:15px 0;
+
+}
+
+.hero p{
+
+    margin-top:30px;
+
+    margin-bottom:45px;
+
+    font-size:22px;
+
+    line-height:1.6;
+
+}
+
+
+.open-btn{
+
+    min-width:320px;
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#d4af37,#c89700);
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(212,175,55,.35);
+
+}
+
+.open-btn:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(212,175,55,.45);
+
+}
+
+
+/* ================= LOADER ================= */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:#fffaf5;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:.8s;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-content h2{
+
+    font-size:55px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#b88d18;
+
+}
+
+.loader-content p{
+
+    margin-top:15px;
+
+    color:#777;
+
+    letter-spacing:3px;
+
+}
+
+.loader-hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+#musicBtn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#d4af37;
+
+    color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+#musicBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+
+}
+
+.invitation-section{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.invitation-section h5{
+
+    color:#d4af37;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.invitation-section h2{
+
+    font-size:55px;
+
+    font-family:'Cinzel',serif;
+
+    margin-bottom:30px;
+
+}
+
+.invite-text{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+.divider{
+
+    width:180px;
+
+    height:2px;
+
+    background:#d4af37;
+
+    margin:40px auto;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"❀";
+
+    position:absolute;
+
+    top:-14px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#d4af37;
+
+    font-size:24px;
+
+}
+
+/* ===========================
+        FLOATING PETALS
+=========================== */
+
+#petals{
+
+    position:fixed;
+
+    inset: 0;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-80px;
+
+    width:35px;
+
+    opacity:.85;
+
+    animation-name:fall;
+
+    animation-timing-function:linear;
+
+    animation-iteration-count:infinite;
+
+}
+
+@keyframes fall{
+
+    0%{
+
+        transform:
+        translate(0,-100px)
+        rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:
+        translate(-30px,25vh)
+        rotate(120deg);
+
+    }
+
+    50%{
+
+        transform:
+        translate(25px,55vh)
+        rotate(260deg);
+
+    }
+
+    75%{
+
+        transform:
+        translate(-20px,85vh)
+        rotate(420deg);
+
+    }
+
+    100%{
+
+        transform:
+        translate(15px,120vh)
+        rotate(720deg);
+
+    }
+
+}
+
+/*=========================
+        NAVBAR
+=========================*/
+
+#header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+}
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+}
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    color:white;
+
+    letter-spacing:2px;
+
+    white-space:nowrap;
+
+}
+
+
+.scrolled{
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.75);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.scrolled .logo{
+
+    color:#8b1e3f;
+
+}
+
+.scrolled a{
+
+    color:#222;
+
+}
+
+.hamburger{
+
+    display:none;
+
+    font-size:30px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+#mainContent{
+
+    display:none;
+
+    background:#ffffff;
+
+}
+
+.section{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:120px 0;
+
+}
+
+.section-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:60px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    color:#8b1e3f;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:#b8860b;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+.section-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+/*==================================
+        SCRATCH CARD
+===================================*/
+
+.scratch-wrapper{
+
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+
+}
+
+.scratch-card{
+
+    position:relative;
+
+    width:650px;
+    max-width:100%;
+
+    height:260px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:white;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.scratch-date{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    background:white;
+
+    z-index:1;
+
+}
+
+.scratch-date h1{
+
+    font-size:90px;
+
+    color:#8b1e3f;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.scratch-date h2{
+
+    margin-top:8px;
+
+    font-size:44px;
+
+    color:#8b1e3f;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.scratch-date h3{
+
+    font-size:26px;
+
+    letter-spacing:6px;
+
+    color:#d4af37;
+
+}
+
+#scratchCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:5;
+
+    cursor:pointer;
+
+    touch-action:none;
+
+}
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.time-box{
+
+    width:150px;
+    height:160px;
+
+    background:white;
+
+    border-radius:25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border:2px solid #f3ead2;
+
+}
+
+.time-box h3{
+
+    font-size:56px;
+
+    color:#8b1e3f;
+
+    font-family:'Cormorant Garamond',serif;
+
+    line-height:1;
+
+    margin-bottom:10px;
+
+}
+
+.time-box span{
+
+    color:#888;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.time-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+
+}
+
+/* ==========================
+        VENUE
+========================== */
+
+#venue{
+
+    background:#fffaf7;
+
+}
+
+.venue-wrapper{
+
+    display:flex;
+
+    gap:50px;
+
+    align-items:center;
+
+    margin-top:70px;
+
+    flex-wrap:wrap;
+
+}
+
+.venue-card{
+
+    flex:1;
+
+    min-width:320px;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.venue-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+.venue-card h3{
+
+    color:#8b1e3f;
+
+    margin-bottom:30px;
+
+    font-size:32px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.venue-info p{
+
+    margin:18px 0;
+
+    font-size:18px;
+
+    color:#555;
+
+}
+
+.map-btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:#d4af37;
+
+    color:white;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.map-btn:hover{
+
+    background:#b8860b;
+
+}
+
+.venue-map{
+
+    flex:1;
+
+    min-width:320px;
+
+    overflow:hidden;
+
+}
+
+.venue-map iframe{
+
+    width:100%;
+
+    height:450px;
+
+    border:none;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    
+
+}
+
+
+.scroll-indicator{
+
+    margin-top:60px;
+
+    color:white;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    animation:floatArrow 2s infinite;
+
+}
+
+@keyframes floatArrow{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes buttonFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.hero-content{
+
+    animation:floating 6s ease-in-out infinite;
+
+}
+

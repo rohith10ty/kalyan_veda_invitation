@@ -1,0 +1,329 @@
+/* ==========================================
+            WEDDING JOURNEY
+========================================== */
+
+.timeline-section{
+
+    padding:120px 0;
+    background:#fffaf7;
+    overflow:hidden;
+}
+
+.timeline-heading{
+
+    text-align:center;
+    margin-bottom:80px;
+
+}
+
+.journey{
+
+    position:relative;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:140px;
+
+    padding:0 20px;
+
+    min-height:1700px;
+
+}
+
+/* SVG */
+
+.journey-svg{
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:180px;
+
+    height:1700px;
+
+}
+
+#journeyBase{
+
+    fill:none;
+    stroke:#ece2d2;
+    stroke-width:7;
+    stroke-linecap:round;
+
+}
+
+#journeyProgress{
+
+    fill:none;
+    stroke:#d4af37;
+    stroke-width:7;
+    stroke-linecap:round;
+
+}
+
+/* HEART */
+
+#journeyHeart{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:60px;
+    height:60px;
+    pointer-events:none;
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    z-index:100;
+
+    transform:translate(-50%,-50%);
+
+    will-change:transform;
+
+}
+
+/* EVENTS */
+
+.journey-event{
+
+    width:42%;
+
+    position:relative;
+
+}
+
+.journey-event.left{
+
+    align-self:flex-start;
+
+}
+
+.journey-event.right{
+
+    align-self:flex-end;
+
+}
+
+/* CARD */
+
+.journey-card{
+
+    background:#fff;
+
+    border-radius:26px;
+
+    padding:30px;
+
+    border:1px solid rgba(212,175,55,.20);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.journey-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 35px 60px rgba(0,0,0,.15);
+
+}
+
+.journey-date{
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    color:#d4af37;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    font-weight:600;
+
+}
+
+.journey-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#8b1e3f;
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+.journey-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+.journey-time{
+
+    display:inline-block;
+
+    background:#8b1e3f;
+
+    color:#fff;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+/* DESKTOP CONNECTORS */
+
+.journey-event.left::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-78px;
+    top:50%;
+
+    width:78px;
+    height:3px;
+
+    background:#d4af37;
+
+}
+
+.journey-event.right::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-78px;
+    top:50%;
+
+    width:78px;
+    height:3px;
+
+    background:#d4af37;
+
+}
+
+/* ======================
+        MOBILE
+====================== */
+
+@media(max-width:768px){
+
+.timeline-section{
+
+    padding:90px 0;
+
+}
+
+.timeline-heading{
+
+    margin-bottom:50px;
+
+}
+
+.journey{
+
+    gap:70px;
+
+    padding-left:90px;
+
+    padding-right:15px;
+
+    min-height:1500px;
+
+}
+
+.journey-svg{
+
+    left:35px;
+
+    transform:none;
+
+    width:90px;
+
+    height:1500px;
+
+}
+
+#journeyHeart{
+
+    width:46px;
+    height:46px;
+
+    font-size:22px;
+
+}
+
+.journey-event{
+
+    width:100%;
+
+    align-self:stretch !important;
+
+}
+
+.journey-event.left::after,
+.journey-event.right::before{
+
+    display:none;
+
+}
+
+.journey-card{
+
+    padding:22px;
+
+}
+
+.journey-card h3{
+
+    font-size:28px;
+
+}
+
+.journey-card p{
+
+    font-size:16px;
+
+}
+
+}
