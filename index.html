@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+    name="description"
+    content="Join us as we celebrate the wedding of Veda & Kalyan on 15 August 2026.">
+
+    <title>Wedding Invitation</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="icon" href="assets/favcon.png">
+
+    <!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ================= LOADER ================= -->
+
+    <div id="loader">
+        ...
+    </div>
+
+    <!-- ================= PETALS ================= -->
+
+    <div id="petals"></div>
+
+    <!-- ================= MUSIC ================= -->
+
+    <audio id="bgMusic" loop>
+        <source src="assets/music/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn">
+        🔊
+    </button>
+
+    <!-- ================= HEADER ================= -->
+
+    <header id="header">
+
+    <nav class="navbar">
+
+        <a href="#" class="logo">
+            VEDA ✦ KALYAN
+        </a>
+
+    </nav>
+
+</header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h4>Together with our Families</h4>
+
+            <h1>Veda</h1>
+
+            <span>&</span>
+
+            <h1>Kalyan</h1>
+
+            <p>
+                Request the pleasure of your company
+            </p>
+
+            <button class="open-btn">
+
+                Open Invitation
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <div class="scroll-indicator">
+    ↓ Scroll
+</div>
+
+    <!-- ================= MAIN WEBSITE ================= -->
+
+    <main id="mainContent">
+
+        <!-- Invitation Section -->
+
+        <section id="invitation" class="section">
+
+    <div class="container">
+
+        <h5 class="section-subtitle">
+
+            WEDDING INVITATION
+
+        </h5>
+
+        <h2 class="section-title">
+
+            Veda ❤️ Kalyan
+
+        </h2>
+
+        <p class="section-description">
+
+            Together with our families, we joyfully invite you to celebrate
+            the beginning of our forever. Your presence and blessings will
+            make our special day even more memorable.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section id="countdown" class="section">
+
+    <div class="container">
+
+        <h5 class="section-subtitle">
+            SAVE THE DATE
+        </h5>
+
+        <h2 class="section-title">
+            Scratch To Reveal
+        </h2>
+
+        <p class="section-description">
+            Gently scratch the golden card to reveal our wedding date.
+        </p>
+
+        <div class="scratch-wrapper">
+
+            <div class="scratch-card">
+
+                <div class="scratch-date">
+
+                    <h1>15</h1>
+
+                    <h3>AUGUST</h3>
+
+                    <h2>2026</h2>
+
+                </div>
+
+                <canvas id="scratchCanvas"></canvas>
+
+            </div>
+
+        </div>
+
+        <div class="timer">
+
+            <div class="time-box">
+
+                <h3 id="days">00</h3>
+
+                <span>Days</span>
+
+            </div>
+
+            <div class="time-box">
+
+                <h3 id="hours">00</h3>
+
+                <span>Hours</span>
+
+            </div>
+
+            <div class="time-box">
+
+                <h3 id="minutes">00</h3>
+
+                <span>Minutes</span>
+
+            </div>
+
+            <div class="time-box">
+
+                <h3 id="seconds">00</h3>
+
+                <span>Seconds</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- Bride & Groom -->
+
+        <section id="couple">
+
+        </section>
+
+        <!-- ==========================================
+            WEDDING JOURNEY
+========================================== -->
+
+<section id="timeline" class="timeline-section">
+
+    <div class="container">
+
+        <div class="timeline-heading">
+
+            <h5 class="section-subtitle">
+                Wedding Events
+            </h5>
+
+            <h2 class="section-title">
+                Our Beautiful Journey
+            </h2>
+
+            <p class="section-description">
+                Every beautiful beginning starts with unforgettable moments.
+            </p>
+
+        </div>
+
+        <div class="journey">
+
+            <!-- SVG LINE -->
+
+            <svg class="journey-svg"
+                 viewBox="0 0 240 1600"
+                 preserveAspectRatio="none">
+
+                <!-- Background Line -->
+
+                <path
+                    id="journeyBase"
+                    d="
+                    M120 30
+                    C120 140 45 190 120 290
+                    C195 390 45 500 120 620
+                    C195 740 45 870 120 990
+                    C195 1120 45 1270 120 1390
+                    C195 1510 120 1570 120 1590
+                    "/>
+
+                <!-- Animated Line -->
+
+                <path
+                    id="journeyProgress"
+                    d="
+                    M120 30
+                    C120 140 45 190 120 290
+                    C195 390 45 500 120 620
+                    C195 740 45 870 120 990
+                    C195 1120 45 1270 120 1390
+                    C195 1510 120 1570 120 1590
+                    "/>
+
+            </svg>
+
+            <!-- MOVING HEART -->
+
+            <div id="journeyHeart">
+
+                ❤️
+
+            </div>
+
+            <!-- ================= Groom ================= -->
+
+            <article class="journey-event left">
+
+                <div class="journey-card">
+
+                    <span class="journey-date">
+
+                        15 AUGUST 2026
+
+                    </span>
+
+                    <h3>
+
+                        🤵 Groom Entry
+
+                    </h3>
+
+                    <p>
+
+                        Welcoming the groom with traditional rituals
+                        and joyful celebrations.
+
+                    </p>
+
+                    <div class="journey-time">
+
+                        10:45 AM
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- ================= Bride ================= -->
+
+            <article class="journey-event right">
+
+                <div class="journey-card">
+
+                    <span class="journey-date">
+
+                        15 AUGUST 2026
+
+                    </span>
+
+                    <h3>
+
+                        👰 Bride Entry
+
+                    </h3>
+
+                    <p>
+
+                        The bride makes her graceful entrance with
+                        blessings from family.
+
+                    </p>
+
+                    <div class="journey-time">
+
+                        11:30 AM
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- ================= Muhurtham ================= -->
+
+            <article class="journey-event left">
+
+                <div class="journey-card">
+
+                    <span class="journey-date">
+
+                        15 AUGUST 2026
+
+                    </span>
+
+                    <h3>
+
+                        💍 Muhurtham
+
+                    </h3>
+
+                    <p>
+
+                        The sacred wedding ceremony begins.
+
+                    </p>
+
+                    <div class="journey-time">
+
+                        11:52 AM
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- ================= Lunch ================= -->
+
+            <article class="journey-event right">
+
+                <div class="journey-card">
+
+                    <span class="journey-date">
+
+                        15 AUGUST 2026
+
+                    </span>
+
+                    <h3>
+
+                        🍽️ Lunch
+
+                    </h3>
+
+                    <p>
+
+                        Celebrate our new beginning over a delicious
+                        wedding feast.
+
+                    </p>
+
+                    <div class="journey-time">
+
+                        12:30 PM
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- Gallery -->
+
+        <section id="gallery" class="gallery-section">
+
+    <div class="container">
+
+        <h5 class="section-subtitle">
+
+            OUR MEMORIES
+
+        </h5>
+
+        <h2 class="section-title">
+
+            Gallery
+
+        </h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="assets/gallery/1.jpeg">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/gallery/2.JPEG">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/gallery/3.jpeg">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/gallery/4.jpg">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/gallery/5.jpeg">
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/gallery/6.jpeg">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Lightbox -->
+
+<div class="lightbox">
+
+    <span class="close">&times;</span>
+
+    <img id="lightboxImage">
+
+    <button id="prevBtn">
+
+        ❮
+
+    </button>
+
+    <button id="nextBtn">
+
+        ❯
+
+    </button>
+
+</div>
+
+        <!-- Venue -->
+
+        <section id="venue" class="section">
+
+    <div class="container">
+
+        <h5 class="section-subtitle">WEDDING VENUE</h5>
+
+        <h2 class="section-title">Join Us On Our Special Day</h2>
+
+        <p class="section-description">
+            We warmly invite you and your family to celebrate our wedding
+            and bless us as we begin our new journey together.
+        </p>
+
+        <div class="venue-wrapper">
+
+            <div class="venue-card">
+
+                <h3> MYR Convention Hall</h3>
+
+                <div class="venue-info">
+
+                    <p><strong>Date:</strong> 15 August 2026</p>
+
+                    <p><strong>Time:</strong> 11:52 AM</p>
+
+                    <p><strong>Location:</strong> Bellary - Uravakonda - Anantapur Rd, Industrial Estate, Pilligundla, Narayanapuram, Andhra Pradesh 515004</p>
+
+                </div>
+
+                <a
+                    href="https://www.google.com/maps/place/M.Y.R.+Kalyana+Mandapam/@14.6917254,77.5685,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb14aadb8bd18b1:0x78592840f01381cf!8m2!3d14.6917254!4d77.5685!16s%2Fg%2F1v9gsxdc!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    class="map-btn">
+
+                    View Location
+
+                </a>
+
+            </div>
+
+            <div class="venue-map">
+
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.36877721229!2d77.5685!3d14.691725400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14aadb8bd18b1%3A0x78592840f01381cf!2sM.Y.R.%20Kalyana%20Mandapam!5e0!3m2!1sen!2sin!4v1785047496987!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                   
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+<script src="js/navbar.js"></script>
+
+<script src="js/countdown.js"></script>
+
+<script src="js/animation.js"></script>
+
+<script src="js/gallery.js"></script>
+
+<script src="js/timeline.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
