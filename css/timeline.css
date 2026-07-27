@@ -264,9 +264,8 @@
 
     gap:70px;
 
-    padding-left:90px;
-
-    padding-right:15px;
+    padding-left:120px;
+    padding-right:20px;
 
     min-height:2100px;
 
@@ -274,13 +273,13 @@
 
 .journey-svg{
 
-    left:20px;
+    left:45px;
 
-    transform:none;
-
-    width:180px;
+    width:120px;
 
     height:2100px;
+
+    transform:none;
 
 }
 
