@@ -26,9 +26,11 @@ galleryItems.forEach((img,index)=>{
 
 function showImage(){
 
-    lightbox.style.display="flex";
+    lightboxImage.onload = () => {
+    lightbox.classList.add("show");
+};
 
-    lightboxImage.src=galleryItems[currentIndex].src;
+lightboxImage.src = images[currentIndex].src;
 
 }
 

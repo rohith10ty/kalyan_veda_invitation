@@ -159,3 +159,17 @@
     }
 
 }
+
+@media(max-width:768px){
+
+    .close{
+
+        top:25px;
+
+        right:20px;
+
+        font-size:40px;
+
+    }
+
+}
