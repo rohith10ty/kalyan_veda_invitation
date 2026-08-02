@@ -173,3 +173,42 @@
     }
 
 }
+
+/* ===============================
+      END CREDITS MOBILE
+================================ */
+
+@media(max-width:768px){
+
+.end-credits{
+
+    padding:35px 20px 45px;
+
+}
+
+.end-credits p{
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+.end-credits a{
+
+    font-size:15px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.credit-phone,
+.credit-website{
+
+    font-size:15px;
+
+}
+
+}

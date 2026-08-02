@@ -996,3 +996,89 @@ ul{
 
 }
 
+/* ===============================
+        END CREDITS
+================================ */
+
+.end-credits{
+
+    text-align:center;
+
+    padding:45px 20px 55px;
+
+    background:#fdf8f3;
+
+    border-top:1px solid rgba(201,157,43,.15);
+
+}
+
+.end-credits p{
+
+    margin:0;
+
+    color:#6b6b6b;
+
+    font-size:16px;
+
+    letter-spacing:.5px;
+
+}
+
+.end-credits strong{
+
+    color:#8d2046;
+
+    font-weight:600;
+
+}
+
+.end-credits a{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    color:#d4af37;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.end-credits a:hover{
+
+    color:#8d2046;
+
+}
+
+.credit-phone,
+.credit-website{
+
+    display:block;
+
+    margin-top:10px;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#d4af37;
+
+    transition:.3s;
+
+}
+
+.credit-phone:hover,
+.credit-website:hover{
+
+    color:#8d2046;
+
+}
+
