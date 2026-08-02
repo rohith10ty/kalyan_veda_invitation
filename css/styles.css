@@ -1004,79 +1004,93 @@ ul{
 
     text-align:center;
 
-    padding:45px 20px 55px;
+    padding:70px 20px 80px;
 
-    background:#fdf8f3;
-
-    border-top:1px solid rgba(201,157,43,.15);
+    background:transparent;
 
 }
 
-.end-credits p{
+.credit-line{
 
-    margin:0;
+    width:90px;
 
-    color:#6b6b6b;
+    height:2px;
 
-    font-size:16px;
+    background:#d4af37;
 
-    letter-spacing:.5px;
+    margin:0 auto 30px;
+
+    border-radius:10px;
 
 }
 
-.end-credits strong{
+.end-credits h3{
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#b88a16;
+
+    margin-bottom:10px;
+
+    font-weight:500;
+
+}
+
+.end-credits h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:42px;
 
     color:#8d2046;
 
+    margin-bottom:25px;
+
     font-weight:600;
 
 }
 
-.end-credits a{
+.credit-contact{
 
-    display:inline-block;
+    display:flex;
 
-    margin-top:10px;
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.credit-contact span{
 
     color:#d4af37;
 
+    font-size:18px;
+
+}
+
+.credit-contact a{
+
     text-decoration:none;
+
+    color:#555;
 
     font-size:17px;
 
-    font-weight:600;
+    font-weight:500;
 
     transition:.3s;
 
 }
 
-.end-credits a:hover{
-
-    color:#8d2046;
-
-}
-
-.credit-phone,
-.credit-website{
-
-    display:block;
-
-    margin-top:10px;
-
-    text-decoration:none;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    color:#d4af37;
-
-    transition:.3s;
-
-}
-
-.credit-phone:hover,
-.credit-website:hover{
+.credit-contact a:hover{
 
     color:#8d2046;
 

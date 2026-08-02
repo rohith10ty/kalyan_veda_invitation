@@ -174,38 +174,43 @@
 
 }
 
-/* ===============================
-      END CREDITS MOBILE
-================================ */
-
 @media(max-width:768px){
 
 .end-credits{
 
-    padding:35px 20px 45px;
+    padding:50px 20px 60px;
 
 }
 
-.end-credits p{
+.end-credits h2{
 
-    font-size:14px;
-
-    line-height:1.7;
+    font-size:32px;
 
 }
 
-.end-credits a{
+.end-credits h3{
 
-    font-size:15px;
+    font-size:13px;
+
+    letter-spacing:3px;
 
 }
 
+.credit-contact{
+
+    flex-direction:column;
+
+    gap:10px;
+
 }
 
-@media(max-width:768px){
+.credit-contact span{
 
-.credit-phone,
-.credit-website{
+    display:none;
+
+}
+
+.credit-contact a{
 
     font-size:15px;
 
